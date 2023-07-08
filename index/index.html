@@ -25,6 +25,108 @@
     <p>ただの改行はweb上では反映されない。</p>
 
     <img src="/image/sakura.jpg" alt="美しい桜">
-    <p><img src="/image/saku.jpg" alt="読み込めないときに出る文字"></p>
+    <p><img src="/image/saku.jpg" alt="altは読み込めないときに出る文字"></p>
+
+    <a href="https://google.co.jp">Google</a>で検索！
+    <a href="https://google.co.jp"><img src="/image/sakura.jpg" alt="美しい桜"></a>
+
+    <a href="mailto:info.example.com">お問い合わせメール</a>
+
+    <a href="https://google.co.jp" target="_blank">別タブでGoogle!</a>
+
+    <ul>
+        <li>卵(3個)</li>
+        <li>しょうゆ(大さじ1)</li>
+        <li>みりん(大さじ1)</li>
+        <li>塩(少々)</li>
+    </ul>
+
+    <ol>
+        <li>卵を割りほぐし</li>
+        <li>卵焼き器に</li>
+        <li>半熟状に</li>
+        <li>これを繰り返し、</li>
+    </ol>
+
+    <!-- borderは表の線　普通はCSSを使う -->
+    <table border="1">
+        <tr>
+            <th>プラン名</th>
+            <th>料金</th>
+        </tr>
+        <tr>
+            <td>わくわくプラン</td>
+            <td>月額 2900円</td>
+        </tr>
+        <tr>
+            <td>にこにこプラン</td>
+            <td>月額 1900円</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <!-- 横2つつなげる -->
+            <th colspan="2">プラン名 料金</th>
+        </tr>
+        <tr>
+            <!-- 縦2つつなげる -->
+            <td rowspan="2">わくわくプラン にこにこプラン</td>
+            <td>月額 2900円</td>
+        </tr>
+        <tr>
+            <td>月額 1900円</td>
+        </tr>
+    </table>
+
+    <form action="example.php" method="post" name="contact-form">
+        <!-- 形式を指定することによって正しい属性値が打ち込まれているかチェック可能 -->
+        名前：<input type="text">
+        名前：<input type="text" placeholder="名字 名前">
+        検索するときのテキスト：<input type="search">
+        メールアドレス：<input type="email">
+        電話番号：<input type="tel">
+        URL：<input type="url">
+
+        <!-- nameが同じものの中で1つだけ選択可能 -->
+        性別：<input type="radio" name="gender" value="男">男
+        <input type="radio" name="gender" value="女" checked>女
+        <input type="radio" name="gender" value="その他">その他
+        <input type="radio" name="other" value="別です">別です
+    </form>
+
+    <p>
+        好きな色：
+        <input type="checkbox" name="color" value="赤" checked>赤
+        <input type="checkbox" name="color" value="青">青
+        <input type="checkbox" name="color" value="緑">緑
+        <input type="checkbox" name="color" value="黃">黃
+    </p>
+
+    <p>
+        <input type="submit" value="送信する">
+        <input type="image" src="/image/button.png" alt="送信する">
+    </p>
+
+    <select name="bloodtype" id="">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="O">O</option>
+        <option value="AB">AB</option>
+        <option value="不明" selected>不明</option>
+    </select>
+
+    <textarea name="message" id="" cols="" rows="">メッセージを入力</textarea>
+    <textarea name="message" id="" cols="" rows="" placeholder="メッセージを入力"></textarea>
+
+    <!-- labelで文字も押せるように -->
+    <input type="checkbox" name="travel" value="日本国内" id="japan">
+    <label for="japan">日本国内</label>
+    <input type="checkbox" name="travel" value="ヨーロッパ" id="europe">
+    <label for="europe">ヨーロッパ</label>
+    <input type="checkbox" name="travel" value="東南アジア" id="asia">
+    <label for="asia">東南アジア</label>
+
+
 </body>
 </html>
